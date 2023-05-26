@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hocuspocus/extension-database": "^2.0.6",
+    "@hocuspocus/server": "^2.0.6",
+    "@types/node": "^20.2.4",
+    "tsx": "^3.12.7",
+    "y-protocols": "^1.0.5",
+    "yjs": "^13.6.1"
+  }
+}

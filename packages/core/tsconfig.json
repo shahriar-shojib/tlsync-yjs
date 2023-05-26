@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ES2022",
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "bundler",
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": false,
+    "verbatimModuleSyntax": true,
+    "incremental": true
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+}

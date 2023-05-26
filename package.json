@@ -1,0 +1,17 @@
+{
+  "name": "tlsync-yjs",
+  "version": "1.0.0",
+  "description": "tldraw-v2 yjs utilities",
+  "main": "index.js",
+  "repository": "git@github.com:shahriar-shojib/tlsync-yjs.git",
+  "author": "Shahriar Shojib <shahriar_shojib@hotmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "postinstall": "pnpm --filter './packages/**' build",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev": "pnpm --filter='./apps/**' dev",
+    "dev:packages": "pnpm --filter='./packages/**' dev"
+  }
+}
