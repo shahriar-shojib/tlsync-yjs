@@ -9,6 +9,7 @@ export const Form: FC = () => {
 
     if (!roomID || !userID) {
       alert('Please enter a room ID and user ID');
+      return;
     }
 
     window.location.href = `/?room=${roomID}&userID=${userID}`;
@@ -16,8 +17,8 @@ export const Form: FC = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" placeholder="Room ID" />
-      <input type="text" placeholder="User ID" />
+      <input type="text" placeholder="Room ID" name="roomID" />
+      <input type="text" placeholder="User ID" name="userID" />
       <button type="submit">Submit</button>
     </form>
   );
