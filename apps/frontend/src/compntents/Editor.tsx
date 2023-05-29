@@ -12,18 +12,17 @@ import '@tldraw/tldraw/ui.css';
 import { useYjs } from '@tlsync-yjs/core';
 import { FC } from 'react';
 
-export const Editor: FC<{
+type Props = {
   store: TLStore;
   provider: HocuspocusProvider;
-}> = props => {
+};
+
+export const Editor: FC<Props> = props => {
   useYjs(props);
 
   return (
     <div className="tldraw__editor">
-      <TldrawEditor
-        store={props.store}
-        onMount={app => ((window as any).app = app)}
-      >
+      <TldrawEditor store={props.store}>
         <TldrawUiContextProvider>
           <ContextMenu>
             <Canvas />
