@@ -25,8 +25,7 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "noFallthroughCasesInSwitch": true,
-    "removeComments": false,
-    "incremental": true
+    "removeComments": false
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }

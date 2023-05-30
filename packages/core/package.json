@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "license": "MIT",
-  "private": false,
   "files": [
     "dist"
   ],
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "dev": "tsc -w"
   },
   "devDependencies": {
@@ -25,19 +30,22 @@
     "eslint-plugin-react-refresh": "^0.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "signia": "^0.1.4",
+    "signia-react": "^0.1.4",
     "typescript": "^5.0.4",
     "y-protocols": "^1.0.5",
-    "yjs": "^13.6.1",
-    "signia": "^0.1.4",
-    "signia-react": "^0.1.4"
+    "yjs": "^13.6.1"
   },
   "peerDependencies": {
+    "@tldraw/tldraw": "canary",
+    "@tldraw/tlstore": "canary",
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0",
-    "yjs": ">=13.0.0",
     "signia": ">=0.1.4",
     "signia-react": ">=0.1.4",
-    "@tldraw/tldraw": "canary",
-    "@tldraw/tlstore": "canary"
+    "yjs": ">=13.0.0"
+  },
+  "dependencies": {
+    "tsup": "^6.7.0"
   }
 }
