@@ -9,14 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@hocuspocus/provider": "^2.0.6",
+    "@radix-ui/colors": "^0.1.8",
+    "@radix-ui/react-form": "^0.0.3",
     "@tldraw/tldraw": "2.0.0-canary.7578fff2b179",
     "@tldraw/tlstore": "canary",
+    "@tlsync-yjs/core": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "y-protocols": "^1.0.5",
-    "yjs": "^13.6.1",
-    "@tlsync-yjs/core": "workspace:*"
+    "y-webrtc": "^10.2.5",
+    "y-websocket": "^1.5.0",
+    "yjs": "^13.6.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

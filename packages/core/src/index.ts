@@ -12,3 +12,5 @@ export const useYjs = (props: HookProps) => {
     onMount,
   };
 };
+
+export * from './utils';

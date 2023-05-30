@@ -3,15 +3,6 @@ import type { IdOf } from '@tldraw/tlstore';
 import type { Awareness } from 'y-protocols/awareness.js';
 import type { Doc } from 'yjs';
 
-export const awarenessKeys: Array<TLRecord['typeName']> = ['instance_presence'];
-
-export const contentKeys: Array<TLRecord['typeName']> = [
-  'asset',
-  'shape',
-  'page',
-  'document',
-];
-
 export interface YProvider {
   document: Doc;
   awareness: Awareness;
@@ -30,4 +21,11 @@ export type HookProps = {
   store: TLStore;
   userID: string;
   userName: string;
+  color?: string;
+};
+
+export type PresenceUserAtom = {
+  id: string;
+  color: string;
+  name: string;
 };

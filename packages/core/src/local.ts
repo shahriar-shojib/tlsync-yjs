@@ -1,6 +1,7 @@
 import type { TLRecord } from '@tldraw/tldraw';
 import { useEffect } from 'react';
-import { awarenessKeys, contentKeys, type HookProps } from './types';
+import { awarenessKeys, contentKeys } from './constants';
+import { type HookProps } from './types';
 
 export const useLocal = ({
   provider: { awareness, document },

@@ -12,20 +12,22 @@ import '@tldraw/tldraw/editor.css';
 import '@tldraw/tldraw/ui.css';
 import { useYjs } from '@tlsync-yjs/core';
 import { FC } from 'react';
+import { useRoomContext } from '../context/room.context';
 
 type Props = {
   store: TLStore;
   provider: HocuspocusProvider;
   config: TldrawEditorConfig;
-  userID: string;
 };
 
-export const Editor: FC<Props> = ({ config, userID, ...props }) => {
+export const Editor: FC<Props> = ({ config, ...props }) => {
+  const { userID, name } = useRoomContext();
+
   const { onMount } = useYjs({
     provider: props.provider,
     store: props.store,
     userID,
-    userName: `User ${userID}`,
+    userName: name,
   });
 
   return (
@@ -35,7 +37,7 @@ export const Editor: FC<Props> = ({ config, userID, ...props }) => {
           <ContextMenu>
             <Canvas />
           </ContextMenu>
-          <TldrawUi overrides={{}} />
+          <TldrawUi />
         </TldrawUiContextProvider>
       </TldrawEditor>
     </div>

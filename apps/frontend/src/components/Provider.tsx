@@ -4,16 +4,17 @@ import {
 } from '@hocuspocus/provider';
 import { TAB_ID, TLRecord, TldrawEditorConfig } from '@tldraw/tldraw';
 import { FC, useMemo } from 'react';
+import { useRoomContext } from '../context/room.context';
 import { Editor } from './Editor';
 
 type Props = {
   ws: HocuspocusProviderWebsocket;
-  room: string;
-  userID: string;
 };
 
-export const Provider: FC<Props> = ({ room, userID, ws }) => {
+export const Provider: FC<Props> = ({ ws }) => {
   const config = useMemo(() => new TldrawEditorConfig({}), []);
+
+  const { room } = useRoomContext();
 
   const store = useMemo(() => {
     return config.createStore({
@@ -40,7 +41,5 @@ export const Provider: FC<Props> = ({ room, userID, ws }) => {
     return provider;
   }, [room, store, ws]);
 
-  return (
-    <Editor store={store} provider={provider} config={config} userID={userID} />
-  );
+  return <Editor store={store} provider={provider} config={config} />;
 };

@@ -1,6 +1,6 @@
 {
   "name": "@tlsync-yjs/core",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "license": "MIT",
   "private": false,
@@ -15,6 +15,8 @@
   "devDependencies": {
     "@tldraw/tldraw": "2.0.0-canary.7578fff2b179",
     "@tldraw/tlstore": "canary",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "eslint": "^8.40.0",
@@ -23,10 +25,19 @@
     "eslint-plugin-react-refresh": "^0.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "typescript": "^5.0.4",
     "y-protocols": "^1.0.5",
     "yjs": "^13.6.1",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "typescript": "^5.0.4"
+    "signia": "^0.1.4",
+    "signia-react": "^0.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "yjs": ">=13.0.0",
+    "signia": ">=0.1.4",
+    "signia-react": ">=0.1.4",
+    "@tldraw/tldraw": "canary",
+    "@tldraw/tlstore": "canary"
   }
 }

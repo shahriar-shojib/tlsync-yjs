@@ -1,7 +1,8 @@
 import { HocuspocusProviderWebsocket } from '@hocuspocus/provider';
 import { useMemo } from 'react';
-import { Form } from './components/Form';
+import { RoomForm } from './components/Form';
 import { Provider } from './components/Provider';
+import { RoomContextProvider } from './context/room.context';
 
 const App = () => {
   const ws = useMemo(() => {
@@ -11,23 +12,28 @@ const App = () => {
     });
   }, []);
 
-  const { room, userID } = useMemo(() => {
+  const values = useMemo(() => {
     const search = new URLSearchParams(window.location.search);
     const room = search.get('room') || '';
     const userID = search.get('userID') || '';
+    const name = search.get('name') || '';
 
-    return { room, userID };
+    return { room, userID, name };
   }, []);
 
   const isValid = useMemo(() => {
-    return room && userID;
-  }, [room, userID]);
+    return values.room && values.userID && values.name;
+  }, [values]);
 
-  if (isValid) {
-    return <Provider ws={ws} room={room} userID={userID} />;
+  if (!isValid) {
+    return <RoomForm />;
   }
 
-  return <Form />;
+  return (
+    <RoomContextProvider value={values}>
+      <Provider ws={ws} />
+    </RoomContextProvider>
+  );
 };
 
 export default App;
