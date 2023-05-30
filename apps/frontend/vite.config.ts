@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   clearScreen: false,
   optimizeDeps: {
-    exclude: ['@tldraw/assets'],
+    exclude: ['@tldraw/assets', '@tldraw/core', '@tlsync-yjs/core'],
   },
 });

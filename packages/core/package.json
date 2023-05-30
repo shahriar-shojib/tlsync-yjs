@@ -13,8 +13,8 @@
     "dev": "tsc -w"
   },
   "devDependencies": {
-    "@tldraw/tldraw": "^2.0.0-alpha.12",
-    "@tldraw/tlstore": "^0.0.2-alpha.1",
+    "@tldraw/tldraw": "2.0.0-canary.7578fff2b179",
+    "@tldraw/tlstore": "canary",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "eslint": "^8.40.0",

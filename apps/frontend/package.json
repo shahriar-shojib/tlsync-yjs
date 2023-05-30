@@ -12,8 +12,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@hocuspocus/provider": "^2.0.6",
-    "@tldraw/tldraw": "^2.0.0-alpha.12",
-    "@tldraw/tlstore": "^0.0.2-alpha.1",
+    "@tldraw/tldraw": "2.0.0-canary.7578fff2b179",
+    "@tldraw/tlstore": "canary",
     "y-protocols": "^1.0.5",
     "yjs": "^13.6.1",
     "@tlsync-yjs/core": "workspace:*"

@@ -25,17 +25,17 @@ importers:
         specifier: ^13.6.1
         version: 13.6.1
 
-  apps/example:
+  apps/frontend:
     dependencies:
       '@hocuspocus/provider':
         specifier: ^2.0.6
         version: 2.0.6(y-protocols@1.0.5)(yjs@13.6.1)
       '@tldraw/tldraw':
-        specifier: ^2.0.0-alpha.12
-        version: 2.0.0-alpha.12(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+        specifier: 2.0.0-canary.7578fff2b179
+        version: 2.0.0-canary.7578fff2b179(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
       '@tldraw/tlstore':
-        specifier: ^0.0.2-alpha.1
-        version: 0.0.2-alpha.1
+        specifier: canary
+        version: 2.0.0-canary.7578fff2b179(signia@0.1.1)
       '@tlsync-yjs/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -86,11 +86,11 @@ importers:
   packages/core:
     devDependencies:
       '@tldraw/tldraw':
-        specifier: ^2.0.0-alpha.12
-        version: 2.0.0-alpha.12(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+        specifier: 2.0.0-canary.7578fff2b179
+        version: 2.0.0-canary.7578fff2b179(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
       '@tldraw/tlstore':
-        specifier: ^0.0.2-alpha.1
-        version: 0.0.2-alpha.1
+        specifier: canary
+        version: 2.0.0-canary.7578fff2b179(signia@0.1.1)
       '@types/react':
         specifier: ^18.0.27
         version: 18.0.27
@@ -845,8 +845,8 @@ packages:
       - '@types/react'
     dev: false
 
-  /@radix-ui/react-popover@1.0.5(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GRHZ8yD12MrN2NLobHPE8Rb5uHTxd9x372DE9PPNnBjpczAQHcZ5ne0KXG4xpf+RDdXSzdLv9ym6mYJCDTaUZg==}
+  /@radix-ui/react-popover@1.0.6-rc.5(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-x52g7glgCUf2yLOWo9jLnZLwxFznrBxLyWHY+pLjE2GYYhlPQHfxAmYPPycrrEg+7KdGhLwNH0BnzUI0kET6/Q==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
@@ -859,7 +859,7 @@ packages:
       '@radix-ui/react-focus-guards': 1.0.0(react@18.2.0)
       '@radix-ui/react-focus-scope': 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-id': 1.0.0(react@18.2.0)
-      '@radix-ui/react-popper': 1.1.1(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-popper': 1.1.2-rc.5(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-portal': 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-presence': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-primitive': 1.0.2(react-dom@18.2.0)(react@18.2.0)
@@ -873,8 +873,8 @@ packages:
       - '@types/react'
     dev: true
 
-  /@radix-ui/react-popover@1.0.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GRHZ8yD12MrN2NLobHPE8Rb5uHTxd9x372DE9PPNnBjpczAQHcZ5ne0KXG4xpf+RDdXSzdLv9ym6mYJCDTaUZg==}
+  /@radix-ui/react-popover@1.0.6-rc.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-x52g7glgCUf2yLOWo9jLnZLwxFznrBxLyWHY+pLjE2GYYhlPQHfxAmYPPycrrEg+7KdGhLwNH0BnzUI0kET6/Q==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
@@ -887,7 +887,7 @@ packages:
       '@radix-ui/react-focus-guards': 1.0.0(react@18.2.0)
       '@radix-ui/react-focus-scope': 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-id': 1.0.0(react@18.2.0)
-      '@radix-ui/react-popper': 1.1.1(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-popper': 1.1.2-rc.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-portal': 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-presence': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-primitive': 1.0.2(react-dom@18.2.0)(react@18.2.0)
@@ -926,6 +926,52 @@ packages:
 
   /@radix-ui/react-popper@1.1.1(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-keYDcdMPNMjSC8zTsZ8wezUMiWM9Yj14wtF3s0PTIs9srnEPC9Kt2Gny1T3T81mmSeyDjZxsD9N5WCwNNb712w==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.21.5
+      '@floating-ui/react-dom': 0.7.2(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-arrow': 1.0.2(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-compose-refs': 1.0.0(react@18.2.0)
+      '@radix-ui/react-context': 1.0.0(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.2(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-use-callback-ref': 1.0.0(react@18.2.0)
+      '@radix-ui/react-use-layout-effect': 1.0.0(react@18.2.0)
+      '@radix-ui/react-use-rect': 1.0.0(react@18.2.0)
+      '@radix-ui/react-use-size': 1.0.0(react@18.2.0)
+      '@radix-ui/rect': 1.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
+  /@radix-ui/react-popper@1.1.2-rc.5(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ABYjxwalGn2vCAKn69KVdXiDdt4rmOaw53GkTcuOT1SJi0bxhq5qtvbRMX96DHZPjJLAVJ/iJvGQF2PvPHpFzw==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.21.5
+      '@floating-ui/react-dom': 0.7.2(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-arrow': 1.0.2(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-compose-refs': 1.0.0(react@18.2.0)
+      '@radix-ui/react-context': 1.0.0(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.2(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-use-callback-ref': 1.0.0(react@18.2.0)
+      '@radix-ui/react-use-layout-effect': 1.0.0(react@18.2.0)
+      '@radix-ui/react-use-rect': 1.0.0(react@18.2.0)
+      '@radix-ui/react-use-size': 1.0.0(react@18.2.0)
+      '@radix-ui/rect': 1.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: true
+
+  /@radix-ui/react-popper@1.1.2-rc.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ABYjxwalGn2vCAKn69KVdXiDdt4rmOaw53GkTcuOT1SJi0bxhq5qtvbRMX96DHZPjJLAVJ/iJvGQF2PvPHpFzw==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
@@ -1308,131 +1354,135 @@ packages:
       '@swc/core-win32-x64-msvc': 1.3.60
     dev: true
 
-  /@tldraw/editor@2.0.0-alpha.12(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
-    resolution: {integrity: sha512-k9eTxvnuHmKeQk4nA3y1sI+RVRUkhofSLLqMWNFfeAz7n4HgCsxPaleVjqh0f5K+HEW7Oms9t00nEIpkr/fB7A==}
+  /@tldraw/editor@2.0.0-canary.7578fff2b179(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
+    resolution: {integrity: sha512-t0vbBtY9hy4aaBTW1GmikyDQik7QRpQaGrlHmSv2EiOxXZpnSvdCDiwyVmkHB1mQ2geQm+/diirIyfxw/czLww==}
     peerDependencies:
       react: ^18
       react-dom: ^18
       signia: '*'
       signia-react: '*'
     dependencies:
-      '@tldraw/primitives': 2.0.0-alpha.12(signia@0.1.1)
-      '@tldraw/tlschema': 2.0.0-alpha.12(signia@0.1.1)
-      '@tldraw/tlstore': 2.0.0-alpha.12(signia@0.1.1)
-      '@tldraw/tlvalidate': 2.0.0-alpha.12
-      '@tldraw/utils': 2.0.0-alpha.12
+      '@tldraw/indices': 2.0.0-canary.7578fff2b179
+      '@tldraw/primitives': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlschema': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlstore': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlvalidate': 2.0.0-canary.7578fff2b179
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
       '@use-gesture/react': 10.2.27(react@18.2.0)
       classnames: 2.3.2
+      crc: 4.3.2
       escape-string-regexp: 5.0.0
       eventemitter3: 4.0.7
       is-plain-object: 5.0.0
       lodash.throttle: 4.1.1
       lodash.uniq: 4.5.0
-      nanoid: 3.3.6
+      nanoid: 4.0.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       signia: 0.1.1
       signia-react: 0.1.1(react@18.2.0)
+    transitivePeerDependencies:
+      - buffer
 
-  /@tldraw/polyfills@2.0.0-alpha.12:
-    resolution: {integrity: sha512-lfaU1puAQsmjGM7NiiW2fkuvv9ZLBhlDdI9NagW0Ut6ck4jnZPIBU304gCHtgeNt8F22vpE1N1U7YTjecw4saQ==}
+  /@tldraw/indices@2.0.0-canary.7578fff2b179:
+    resolution: {integrity: sha512-JWbOWp0mSlkiZV5fj0PtDAQX+9hEzVIH6i753nXcVgZD0nyWpEqwCWCJKVhs7T+/Odoz1jpRDoEqoVZ85fCTsw==}
+
+  /@tldraw/polyfills@2.0.0-canary.7578fff2b179:
+    resolution: {integrity: sha512-It55huh54hX7ublb/XN+x6FwACgfDYEuPmyhA6bR4ZMgvmjVXYh557LL5D0kU3uZDyVx7H8CqXnSwYQdA0qH7g==}
     dependencies:
       core-js: 3.30.2
 
-  /@tldraw/primitives@2.0.0-alpha.12(signia@0.1.1):
-    resolution: {integrity: sha512-IgIzDiVvdF3uTvGZ85DBL7mcjY95bO+pKwwTzvq7fiijX4tp7JvrHh84NJkOgO820vDT0yA15F2QjkuhsS7cHg==}
+  /@tldraw/primitives@2.0.0-canary.7578fff2b179(signia@0.1.1):
+    resolution: {integrity: sha512-9VJ4MDUFNS3nYeSTPYxxwvSxpUpRrdbQ2JgAXadoSGOPsJGo5QPToCLIDv8oep4f1azHfAqNG9jvK3Uz7P27pw==}
     dependencies:
-      '@tldraw/tlschema': 2.0.0-alpha.12(signia@0.1.1)
+      '@tldraw/tlschema': 2.0.0-canary.7578fff2b179(signia@0.1.1)
     transitivePeerDependencies:
       - signia
 
-  /@tldraw/tldraw@2.0.0-alpha.12(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
-    resolution: {integrity: sha512-VfYa75aG9OI7ywpWlFbdUHut3Ty4WAKS94IKWbx71DzPq7PXVumBL/+YFE3lw/Xi2gtsUmILcIPey0slYu6KqQ==}
+  /@tldraw/tldraw@2.0.0-canary.7578fff2b179(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
+    resolution: {integrity: sha512-p93tqZ14Jhw9ZZwMdaaFT1UuQ3fBI1g0IIzNP3pC0GB6wkhR17VB4QM94kRDejSVnK0/m08RWczuiwFFxQnVOg==}
     peerDependencies:
       react: ^18
       react-dom: ^18
     dependencies:
-      '@tldraw/editor': 2.0.0-alpha.12(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/polyfills': 2.0.0-alpha.12
-      '@tldraw/tlsync-client': 2.0.0-alpha.12(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/ui': 2.0.0-alpha.12(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/editor': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/polyfills': 2.0.0-canary.7578fff2b179
+      '@tldraw/tlsync-client': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/ui': 2.0.0-canary.7578fff2b179(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
+      - buffer
       - signia
       - signia-react
     dev: true
 
-  /@tldraw/tldraw@2.0.0-alpha.12(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
-    resolution: {integrity: sha512-VfYa75aG9OI7ywpWlFbdUHut3Ty4WAKS94IKWbx71DzPq7PXVumBL/+YFE3lw/Xi2gtsUmILcIPey0slYu6KqQ==}
+  /@tldraw/tldraw@2.0.0-canary.7578fff2b179(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
+    resolution: {integrity: sha512-p93tqZ14Jhw9ZZwMdaaFT1UuQ3fBI1g0IIzNP3pC0GB6wkhR17VB4QM94kRDejSVnK0/m08RWczuiwFFxQnVOg==}
     peerDependencies:
       react: ^18
       react-dom: ^18
     dependencies:
-      '@tldraw/editor': 2.0.0-alpha.12(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/polyfills': 2.0.0-alpha.12
-      '@tldraw/tlsync-client': 2.0.0-alpha.12(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/ui': 2.0.0-alpha.12(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/editor': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/polyfills': 2.0.0-canary.7578fff2b179
+      '@tldraw/tlsync-client': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/ui': 2.0.0-canary.7578fff2b179(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
+      - buffer
       - signia
       - signia-react
     dev: false
 
-  /@tldraw/tlschema@2.0.0-alpha.12(signia@0.1.1):
-    resolution: {integrity: sha512-hkdtoyjoX1a4WX0V3kjPcH+aKKr9W+ZEQeqAslpkE8ZASLdiVKBrMf2AtcIUPAhPMeBtwUUGcwR1vTCPOmqyzw==}
-    dependencies:
-      '@tldraw/tlstore': 2.0.0-alpha.12(signia@0.1.1)
-      '@tldraw/tlvalidate': 2.0.0-alpha.12
-      '@tldraw/utils': 2.0.0-alpha.12
-      nanoid: 3.3.6
-    transitivePeerDependencies:
-      - signia
-
-  /@tldraw/tlstore@0.0.2-alpha.1:
-    resolution: {integrity: sha512-PxhPMNxatzpSKk0CFSQCw0F2jr769YRdi7XvfNPNiLIUn8hWSnXzAKmGLdce2ryp/raUzpaywEcaRsNA3tUJvg==}
-    dependencies:
-      '@tldraw/utils': 0.0.2-alpha.1
-      lodash.isequal: 4.5.0
-      nanoid: 3.3.6
-      tlstate: 0.0.4
-
-  /@tldraw/tlstore@2.0.0-alpha.12(signia@0.1.1):
-    resolution: {integrity: sha512-qSJFjTvD5n7Gg1baADvloI7CP7fYqbQMFRUbfh04hR8d7ZObMg/95pGMENdOR0vt7NpOLW3TBedEgmOdMDDwqQ==}
+  /@tldraw/tlschema@2.0.0-canary.7578fff2b179(signia@0.1.1):
+    resolution: {integrity: sha512-LWYBJvOuZ8L3UV27OUk6RPk74WG1qZZti4JfelC0465w8FPAuO0+Q3A1LBRvVOv8pzgeIIounK5d3U/1fOMq2Q==}
     peerDependencies:
       signia: '*'
     dependencies:
-      '@tldraw/utils': 2.0.0-alpha.12
-      lodash.isequal: 4.5.0
-      nanoid: 3.3.6
+      '@tldraw/tlstore': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlvalidate': 2.0.0-canary.7578fff2b179
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
+      nanoid: 4.0.2
       signia: 0.1.1
 
-  /@tldraw/tlsync-client@2.0.0-alpha.12(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
-    resolution: {integrity: sha512-qdCzeZcglQAF+H9nFHSkryrlSnayhGt26guFSpv/D8lQTsaXR+/ArtrkiqBlXsjgrJUG4vQNVBWgaAnUpsiwxQ==}
+  /@tldraw/tlstore@2.0.0-canary.7578fff2b179(signia@0.1.1):
+    resolution: {integrity: sha512-xmRGEWAtEThHw9+7BaNJVnivHna/1YUHz7QmQ2k/zLCdwZ/HSRI29b12Bi9oFvm7W/jwQHpe2YC3gAGCQgle9A==}
+    peerDependencies:
+      signia: '*'
+    dependencies:
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
+      lodash.isequal: 4.5.0
+      nanoid: 4.0.2
+      signia: 0.1.1
+
+  /@tldraw/tlsync-client@2.0.0-canary.7578fff2b179(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
+    resolution: {integrity: sha512-c1sAO3MWS3o4gUKxIwqX/iYfN9J8aCownZtWET0FX8jexCTAnhuHG3tuntDra4Ze/Z0dWBTcIgbS62SHCZSFXw==}
     peerDependencies:
       signia: '*'
       signia-react: '*'
     dependencies:
-      '@tldraw/editor': 2.0.0-alpha.12(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/tlstore': 2.0.0-alpha.12(signia@0.1.1)
+      '@tldraw/editor': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/tlstore': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
       idb: 7.1.1
       signia: 0.1.1
       signia-react: 0.1.1(react@18.2.0)
     optionalDependencies:
       react: 18.2.0
     transitivePeerDependencies:
+      - buffer
       - react-dom
 
-  /@tldraw/tlvalidate@2.0.0-alpha.12:
-    resolution: {integrity: sha512-edGiRGs3RS4acIf4FuZpppeyKGEVkKJlrEmMj19bdFhIWsZA9n4O4CYetqsLmNUuf7WUM5TiPcGmziQzQTjILA==}
+  /@tldraw/tlvalidate@2.0.0-canary.7578fff2b179:
+    resolution: {integrity: sha512-7/YgvdoZOru6GNiXoMKt7WCm/zZ1Ibf4eMcvnTxiiqob3R9fi9cdsBhA/SRTUe87xuS4K+W22hox6XWYRPLOHA==}
     dependencies:
-      '@tldraw/utils': 2.0.0-alpha.12
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
 
-  /@tldraw/ui@2.0.0-alpha.12(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
-    resolution: {integrity: sha512-MPGOKiFGEIjMqOJzWNCMktwWZiOA7A5ZKSb4qnxW4dLiEmoq/4ND8lgRMd33sHApZDs1MSMAusOxcTUJUy3ucw==}
+  /@tldraw/ui@2.0.0-canary.7578fff2b179(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
+    resolution: {integrity: sha512-q9G3dDVRHQyDWwlb9wAfagBIaznSmZIfK/zF1ff0vncou18qtipKaN44y2wzqOoBkutG2NiGyUMXKdHC79ot6A==}
     peerDependencies:
       react: ^18
       react-dom: ^18
@@ -1443,14 +1493,15 @@ packages:
       '@radix-ui/react-context-menu': 2.1.3(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-dialog': 1.0.3(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-dropdown-menu': 2.0.4(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-popover': 1.0.5(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-popover': 1.0.6-rc.5(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-select': 1.2.1(@types/react@18.0.27)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-slider': 1.1.1(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-toast': 1.1.3(react-dom@18.2.0)(react@18.2.0)
-      '@tldraw/editor': 2.0.0-alpha.12(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/primitives': 2.0.0-alpha.12(signia@0.1.1)
-      '@tldraw/tlsync-client': 2.0.0-alpha.12(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/utils': 2.0.0-alpha.12
+      '@tldraw/editor': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/primitives': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlschema': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlsync-client': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
       browser-fs-access: 0.31.2
       classnames: 2.3.2
       hotkeys-js: 3.10.2
@@ -1462,10 +1513,11 @@ packages:
       signia-react: 0.1.1(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
+      - buffer
     dev: true
 
-  /@tldraw/ui@2.0.0-alpha.12(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
-    resolution: {integrity: sha512-MPGOKiFGEIjMqOJzWNCMktwWZiOA7A5ZKSb4qnxW4dLiEmoq/4ND8lgRMd33sHApZDs1MSMAusOxcTUJUy3ucw==}
+  /@tldraw/ui@2.0.0-canary.7578fff2b179(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1):
+    resolution: {integrity: sha512-q9G3dDVRHQyDWwlb9wAfagBIaznSmZIfK/zF1ff0vncou18qtipKaN44y2wzqOoBkutG2NiGyUMXKdHC79ot6A==}
     peerDependencies:
       react: ^18
       react-dom: ^18
@@ -1476,14 +1528,15 @@ packages:
       '@radix-ui/react-context-menu': 2.1.3(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-dialog': 1.0.3(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-dropdown-menu': 2.0.4(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-popover': 1.0.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-popover': 1.0.6-rc.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-select': 1.2.1(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-slider': 1.1.1(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-toast': 1.1.3(react-dom@18.2.0)(react@18.2.0)
-      '@tldraw/editor': 2.0.0-alpha.12(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/primitives': 2.0.0-alpha.12(signia@0.1.1)
-      '@tldraw/tlsync-client': 2.0.0-alpha.12(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
-      '@tldraw/utils': 2.0.0-alpha.12
+      '@tldraw/editor': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(react@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/primitives': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlschema': 2.0.0-canary.7578fff2b179(signia@0.1.1)
+      '@tldraw/tlsync-client': 2.0.0-canary.7578fff2b179(react-dom@18.2.0)(signia-react@0.1.1)(signia@0.1.1)
+      '@tldraw/utils': 2.0.0-canary.7578fff2b179
       browser-fs-access: 0.31.2
       classnames: 2.3.2
       hotkeys-js: 3.10.2
@@ -1495,13 +1548,11 @@ packages:
       signia-react: 0.1.1(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
+      - buffer
     dev: false
 
-  /@tldraw/utils@0.0.2-alpha.1:
-    resolution: {integrity: sha512-/ZiADYX+xMWLgwbtdyGTLgApVthBCd0BF4nBXKHdb8ul2xx5IeViZGWBCROwfkkCqrDERoFQ/o1IUX3/AYHZDA==}
-
-  /@tldraw/utils@2.0.0-alpha.12:
-    resolution: {integrity: sha512-r/p2pT1Iox12E2icLGL/aTbp74go6nCThJr90NxrqvSAorm3FmAv/sX8GHNog8sD+SLp4Ghinu8aDZNDfq02hQ==}
+  /@tldraw/utils@2.0.0-canary.7578fff2b179:
+    resolution: {integrity: sha512-gyokDpaNnvSn6mJUlYNXohGFxZerkTsgjnEQrRQ1wV4mLS8hWlVkK79HM9yxpYAVCW15JC6qPDlp/JmQIpyMdw==}
 
   /@types/json-schema@7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
@@ -1972,6 +2023,15 @@ packages:
   /core-js@3.30.2:
     resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
     requiresBuild: true
+
+  /crc@4.3.2:
+    resolution: {integrity: sha512-uGDHf4KLLh2zsHa8D8hIQ1H/HtFQhyHrc0uhHBcoKGol/Xnb+MPYfUMw7cvON6ze/GUESTudKayDcJC5HnJv1A==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      buffer: '>=6.0.3'
+    peerDependenciesMeta:
+      buffer:
+        optional: true
 
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -2811,6 +2871,12 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
+
+  /nanoid@4.0.2:
+    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
 
   /natural-compare-lite@1.4.0:
     resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}
@@ -3300,9 +3366,6 @@ packages:
   /text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
-
-  /tlstate@0.0.4:
-    resolution: {integrity: sha512-UW30Fz5HjTVlVUU+SY1cnpDrgc5/IlAtoGWyQu02SGzqCBsBjW8igMZ8aXB1CU/BYm9Xr57mdaEEFQHTms3yCQ==}
 
   /to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}

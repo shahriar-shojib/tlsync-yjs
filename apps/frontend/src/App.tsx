@@ -1,7 +1,7 @@
 import { HocuspocusProviderWebsocket } from '@hocuspocus/provider';
 import { useMemo } from 'react';
-import { Form } from './compntents/Form';
-import { Provider } from './compntents/Provider';
+import { Form } from './components/Form';
+import { Provider } from './components/Provider';
 
 const App = () => {
   const ws = useMemo(() => {

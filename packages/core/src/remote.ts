@@ -1,5 +1,5 @@
 import type { TLRecord } from '@tldraw/tldraw';
-import type { ID, RecordsDiff } from '@tldraw/tlstore';
+import type { IdOf, RecordsDiff } from '@tldraw/tlstore';
 import { useEffect } from 'react';
 import type { Transaction, YMapEvent } from 'yjs';
 import type { HookProps } from './types';
@@ -23,21 +23,21 @@ export const useRemote = ({ provider: { document }, store }: HookProps) => {
       };
 
       for (const event of events) {
-        event.keysChanged.forEach((key: ID<TLRecord>) => {
+        for (const key of event.keysChanged as Set<IdOf<TLRecord>>) {
           const record = event.target.get(key);
 
           if (!record) {
             diff.removed[key] = store.get(key)!;
-            return;
+            continue;
           }
 
           if (store.has(key)) {
             diff.updated[key] = [store.get(key)!, record];
-            return;
+            continue;
           }
 
           diff.added[key] = record;
-        });
+        }
       }
 
       store.mergeRemoteChanges(() => {

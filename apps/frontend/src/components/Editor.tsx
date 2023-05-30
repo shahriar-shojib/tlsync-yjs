@@ -4,6 +4,7 @@ import {
   ContextMenu,
   TLStore,
   TldrawEditor,
+  TldrawEditorConfig,
   TldrawUi,
   TldrawUiContextProvider,
 } from '@tldraw/tldraw';
@@ -15,19 +16,26 @@ import { FC } from 'react';
 type Props = {
   store: TLStore;
   provider: HocuspocusProvider;
+  config: TldrawEditorConfig;
+  userID: string;
 };
 
-export const Editor: FC<Props> = props => {
-  useYjs(props);
+export const Editor: FC<Props> = ({ config, userID, ...props }) => {
+  const { onMount } = useYjs({
+    provider: props.provider,
+    store: props.store,
+    userID,
+    userName: `User ${userID}`,
+  });
 
   return (
     <div className="tldraw__editor">
-      <TldrawEditor store={props.store}>
+      <TldrawEditor config={config} store={props.store} onMount={onMount}>
         <TldrawUiContextProvider>
           <ContextMenu>
             <Canvas />
           </ContextMenu>
-          <TldrawUi />
+          <TldrawUi overrides={{}} />
         </TldrawUiContextProvider>
       </TldrawEditor>
     </div>

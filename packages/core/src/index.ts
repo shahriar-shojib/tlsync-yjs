@@ -5,6 +5,10 @@ import { type HookProps } from './types';
 
 export const useYjs = (props: HookProps) => {
   useRemote(props);
-  useAwareness(props);
+  const onMount = useAwareness(props);
   useLocal(props);
+
+  return {
+    onMount,
+  };
 };
