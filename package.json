@@ -13,5 +13,8 @@
     "dev:backend": "pnpm --filter backend dev",
     "dev": "pnpm --filter='./apps/**' dev",
     "dev:packages": "pnpm --filter='./packages/**' dev"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.1"
   }
 }

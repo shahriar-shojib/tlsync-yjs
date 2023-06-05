@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  on_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'master'
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 8
+      - uses: actions/setup-node@v2
+        with:
+          cache: 'pnpm'
+      - run: pnpm install
