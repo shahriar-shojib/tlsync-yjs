@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "dev": "tsc -w"
+    "dev": "tsup --watch"
   },
   "devDependencies": {
     "@tldraw/tldraw": "2.0.0-canary.7578fff2b179",

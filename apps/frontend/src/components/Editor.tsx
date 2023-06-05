@@ -23,7 +23,7 @@ type Props = {
 export const Editor: FC<Props> = ({ config, ...props }) => {
   const { userID, name } = useRoomContext();
 
-  const { onMount } = useYjs({
+  useYjs({
     provider: props.provider,
     store: props.store,
     userID,
@@ -32,7 +32,7 @@ export const Editor: FC<Props> = ({ config, ...props }) => {
 
   return (
     <div className="tldraw__editor">
-      <TldrawEditor config={config} store={props.store} onMount={onMount}>
+      <TldrawEditor config={config} store={props.store}>
         <TldrawUiContextProvider>
           <ContextMenu>
             <Canvas />

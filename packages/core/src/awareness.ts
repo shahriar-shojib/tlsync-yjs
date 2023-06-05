@@ -1,6 +1,6 @@
-import { App, type TLRecord } from '@tldraw/tldraw';
+import { type TLRecord } from '@tldraw/tldraw';
 import type { ID, RecordsDiff } from '@tldraw/tlstore';
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import { atom, react } from 'signia';
 import { createInstancePresenceAtom } from './instance-presence.atom';
 import type {
@@ -9,7 +9,7 @@ import type {
   HookProps,
   PresenceUserAtom,
 } from './types';
-import { getRandomHexColor } from './utils';
+import { getRandomHexColor, useCleanup } from './utils';
 
 export const useAwareness = ({
   provider: { awareness },
@@ -18,23 +18,14 @@ export const useAwareness = ({
   userName,
   color = getRandomHexColor(),
 }: HookProps) => {
-  const markAsLeaving = useCallback(() => {
+  useCleanup(() => {
     awareness.setLocalState(null);
-  }, [awareness]);
-
-  useEffect(() => {
-    window.addEventListener('beforeunload', markAsLeaving);
-
-    window.addEventListener('close', markAsLeaving);
-
-    return () => {
-      window.removeEventListener('beforeunload', markAsLeaving);
-      window.removeEventListener('close', markAsLeaving);
-    };
-  }, [markAsLeaving]);
+  });
 
   //awareness
   useEffect(() => {
+    const awarenessToUserMap = new Map<number, TLRecord>();
+
     const awarenessHandler = (
       { added, removed, updated }: AwarenessMessage,
       tx: any
@@ -64,6 +55,8 @@ export const useAwareness = ({
       for (const add of added) {
         for (const [key, value] of iter(add)) {
           diff.added[key] = value;
+
+          awarenessToUserMap.set(add, value);
         }
       }
 
@@ -73,17 +66,30 @@ export const useAwareness = ({
 
           if (!storeValue) {
             diff.added[value.id] = value;
+            awarenessToUserMap.set(update, value);
+
             continue;
           }
 
           diff.updated[value.id] = [storeValue, value];
+          awarenessToUserMap.set(update, value);
         }
       }
 
       for (const remove of removed) {
-        for (const [key, value] of iter(remove)) {
-          diff.removed[key] = value;
+        const state = awarenessToUserMap.get(remove);
+
+        if (!state) {
+          continue;
         }
+
+        const storeValue = store.get(state.id);
+
+        if (!storeValue) {
+          continue;
+        }
+
+        diff.removed[storeValue.id] = storeValue;
       }
 
       store.mergeRemoteChanges(() => {
@@ -95,38 +101,34 @@ export const useAwareness = ({
 
     return () => {
       awareness.off('update', awarenessHandler);
-      awareness.setLocalState(null);
+
+      awarenessToUserMap.clear();
     };
   }, [awareness, store]);
 
-  const onMount = useCallback(
-    (_app: App) => {
-      const userData: PresenceUserAtom = {
-        id: userID,
-        color,
-        name: userName,
-      };
+  useEffect(() => {
+    const userData: PresenceUserAtom = {
+      id: userID,
+      color,
+      name: userName,
+    };
 
-      const user = atom('userAtom', userData);
+    const user = atom('_instance_presence_user_atom', userData);
 
-      const computedPresence = createInstancePresenceAtom(user)(store);
+    const computedPresence = createInstancePresenceAtom(user)(store);
 
-      const stop = react('presence_updater', () => {
-        const presence = computedPresence.value;
+    const stop = react('presence_updater', () => {
+      const presence = computedPresence.value;
 
-        if (!presence) {
-          return;
-        }
+      if (!presence) {
+        return;
+      }
 
-        awareness.setLocalStateField(presence.id, presence);
-      });
+      awareness.setLocalStateField(presence.id, presence);
+    });
 
-      return () => {
-        stop();
-      };
-    },
-    [awareness, color, store, userID, userName]
-  );
-
-  return onMount;
+    return () => {
+      stop();
+    };
+  }, [awareness, color, store, userID, userName]);
 };
