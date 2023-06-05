@@ -12,7 +12,9 @@
     "dev:frontend": "pnpm --filter frontend dev",
     "dev:backend": "pnpm --filter backend dev",
     "dev": "pnpm --filter='./apps/**' dev",
-    "dev:packages": "pnpm --filter='./packages/**' dev"
+    "dev:packages": "pnpm --filter='./packages/**' dev",
+    "release": "changeset publish",
+    "changesets": "changesets"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
